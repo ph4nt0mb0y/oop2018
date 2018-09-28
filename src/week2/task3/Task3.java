@@ -1,21 +1,23 @@
-package week2.task3;
+//package week2.task3;
 
 public class Task3 {
+    public static void main(String[] args) {
 
+    }
 }
 
 //TODO: khai báo 3 class tương ứng với 3 đối tượng thực tế ở dưới
-public class GameThu{
-    String Age;
+class GameThu{
+    int Age;
     int RankPoints;
     String Name;
     String YourRank;
 
-    public String getAge() {
+    public int getAge() {
         return Age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         Age = age;
     }
 
@@ -43,25 +45,25 @@ public class GameThu{
         YourRank = yourRank;
     }
 
-    public Gamethu(){
-        Age = "20";
-        RankPoints = 1596;
-        Name = "Nhok";
-        YourRank = "Cao Thu"
+    public GameThu(){
+        this.Age = 20;
+        this.RankPoints = 1596;
+        this.Name = "Nhok";
+        this.YourRank = "Cao Thu";
     }
     public void Rank(){
         if (this.RankPoints>1500) YourRank = "Cao Thu";
         else YourRank = "Tap su";
     }
-    public Win(){
+    public void Win(){
         RankPoints = RankPoints + 5;
     }
-    public Lose(){
+    public void Lose(){
         RankPoints = RankPoints - 3;
     }
 }
-public class Teacher{
-    int Age
+class Teacher {
+    int Age;
     String DoTuoi;
     String Name;
     String Luong;
@@ -98,70 +100,76 @@ public class Teacher{
         Luong = luong;
     }
 
-    public Teacher(){
+    public Teacher() {
         Age = 24;
         Name = "BQC";
         DoTuoi = GiaTre(Age);
         Luong = Luong(Age);
     }
-    public String GiaTre(int Age){
-        if(Age>=50)  return "Gia";
+
+    public String GiaTre(int Age) {
+        if (Age >= 50) return "Gia";
         else return "Tre";
     }
-    public String Luong(int Age){
-        if(Age>=40) return "Luong cao";
+
+    public String Luong(int Age) {
+        if (Age >= 40) return "Luong cao";
         else return "Luong thap";
     }
-    public HoTen(){
+
+    public void HoTen() {
         System.out.println(this.Name);
     }
 
 
-}
-public class Student{
+    public class Hocsinh {
 
-    int Money;
-    String Face;
-    String Diem;
+        int Money;
+        String Face;
+        String Diem;
 
-    public int getMoney() {
-        return Money;
-    }
+        public int getMoney() {
+            return Money;
+        }
 
-    public void setMoney(int money) {
-        Money = money;
-    }
+        public void setMoney(int money) {
+            Money = money;
+        }
 
-    public String getFace() {
-        return Face;
-    }
+        public String getFace() {
+            return Face;
+        }
 
-    public void setFace(String face) {
-        Face = face;
-    }
+        public void setFace(String face) {
+            Face = face;
+        }
 
-    public String getDiem() {
-        return Diem;
-    }
+        public String getDiem() {
+            return Diem;
+        }
 
-    public void setDiem(String diem) {
-        Diem = diem;
-    }
+        public void setDiem(String diem) {
+            Diem = diem;
+        }
 
-    public Student(){
-        Money = 500000;
-        Face = "Vui ve";
-        Diem = "A";
-    }
-    public Tien(int Money){
-        if(Money>300000) Face = "Vui ve";
-        else Face = "Chan nan";
-    }
-    public Diemso(String Diem){
-        if(Diem.equals("A")) Face = "Vui ve";
-        else Face = "Chan nan";
-    }
-    public KhuonMat(){
-        System.out.println(Face);
+        public Hocsinh() {
+            Money = 500000;
+            Face = "Vui ve";
+            Diem = "A";
+        }
+
+        public void Tien(int Money) {
+            if (Money > 300000) Face = "Vui ve";
+            else Face = "Chan nan";
+        }
+
+        public void Diemso(String Diem) {
+            if (Diem.equals("A")) Face = "Vui ve";
+            else Face = "Chan nan";
+        }
+
+        public void KhuonMat() {
+            System.out.println(Face);
+        }
     }
 }
