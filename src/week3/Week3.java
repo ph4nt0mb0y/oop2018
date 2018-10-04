@@ -27,7 +27,7 @@ public class Week3 {
         // TODO: Viết chương trình tính chỉ số BMI và in ra kết quả đánh giá
 		double bmi = weight/(height*height);
         if(bmi < 18.5) return "Thieu can";
-        else if(bmi>=18.5 && bmi <=24.99) "Binh thuong";
+        else if(bmi>=18.5 && bmi <=22.99) "Binh thuong";
         else if(bmi>=23 && bmi <=24.99) return "Thua can";
         else return "Beo phi"; 
     }
