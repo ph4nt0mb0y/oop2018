@@ -17,14 +17,14 @@ public class Week3Test {
 	public void testminOfArray(){
 		int[] a= {1,2,3,4,5};
 		assertEquals(1, Week3.minOfArray(a));
-		int[] a= {7,2,3,4,5};
-		assertEquals(2, Week3.minOfArray(a));
-		int[] a= {5,67,53,34,454};
-		assertEquals(5, Week3.minOfArray(a));
-		int[] a= {545,45,98,5,9,35,1};
-		assertEquals(1, Week3.minOfArray(a));
-		int[] a= {5,8,2,9,3,4,9,4,8,2};
-		assertEquals(2, Week3.minOfArray(a));
+		int[] b= {7,2,3,4,5};
+		assertEquals(2, Week3.minOfArray(b));
+		int[] c= {5,67,53,34,454};
+		assertEquals(5, Week3.minOfArray(c));
+		int[] d= {545,45,98,5,9,35,1};
+		assertEquals(1, Week3.minOfArray(d));
+		int[] e= {5,8,2,9,3,4,9,4,8,2};
+		assertEquals(2, Week3.minOfArray(e));
 	}
     // TODO: Viết 5 testcase cho phương thức calculateBMI()
 	@Test
