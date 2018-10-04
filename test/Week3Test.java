@@ -29,10 +29,10 @@ public class Week3Test {
     // TODO: Viết 5 testcase cho phương thức calculateBMI()
 	@Test
 	public	void testcalculateBMI(){
-		assertEquals("Binh thuong", Week3.calculateBMI(60, 1.7);
-		assertEquals("Thieu can", Week3.calculateBMI(50, 1.75);
-		assertEquals("Binh thuong", Week3.calculateBMI(60, 1.65);
-		assertEquals("Beo Phi", Week3.calculateBMI(80, 1.5);
-		assertEquals("Thua can", Week3.calculateBMI(70, 1.7);
+		assertEquals("Binh thuong", Week3.calculateBMI(60, 1.7));
+		assertEquals("Thieu can", Week3.calculateBMI(50, 1.75));
+		assertEquals("Binh thuong", Week3.calculateBMI(60, 1.65));
+		assertEquals("Beo Phi", Week3.calculateBMI(80, 1.5));
+		assertEquals("Thua can", Week3.calculateBMI(70, 1.7));
 	}
 }
