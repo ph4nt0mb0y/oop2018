@@ -5,7 +5,7 @@
  * @param Name : tên của hoa quả
  * @param Constructor Hoaqua : lấy tên hoa quả
  */
-public abstract class HoaQua {
+public class HoaQua {
     private int GiaCa;
     private String Name;
 
@@ -33,5 +33,7 @@ public abstract class HoaQua {
     public HoaQua(){
         this.Name = this.getFruitName();
     }
-    public abstract String getFruitName();
+    public String getFruitName(){
+        return this.Name;
+    };
 }
