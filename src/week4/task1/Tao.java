@@ -1,3 +1,4 @@
+package week4.task1;
 /**
  * Lớp về Class Hoaqua
  *
@@ -32,5 +33,11 @@ public class Tao extends HoaQua {
     public String NhieuIt(){
         if(this.SoLuong>10) return "Nhieu`";
         else return "It'";
+    }
+
+    public static void main(String[] args) {
+        Tao t=new Tao();
+        t.setName("Tao' Tao'");
+        System.out.println(t.getName());
     }
 }

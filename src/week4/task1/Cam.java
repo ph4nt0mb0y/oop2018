@@ -1,3 +1,4 @@
+package week4.task1;
 /**
  * Lớp về Class Hoaqua
  *
@@ -32,5 +33,10 @@ public class Cam extends HoaQua {
     public String NhieuIt(){
         if(this.SoLuong>10) return "Nhieu`";
         else return "It'";
+    }
+
+    public static void main(String[] args) {
+        Cam c = new Cam();
+        System.out.println(c.getFruitName());
     }
 }

@@ -1,3 +1,4 @@
+package week4.task1;
 /**
  * Lớp về Class Hoaqua
  *

@@ -1,12 +1,22 @@
-package week4.task2;
+package week5_6;
 
-public class Shape {
+import java.util.Random;
+
+public class Shape extends Layer {
+    Point p;
     private String Color;
     private boolean filled;
 
     public Shape() {
-        this.Color = "Red";
-        this.filled = true;
+        p = new Point();
+    }
+
+    public Point getP() {
+        return p;
+    }
+
+    public void setP(Point p) {
+        this.p = p;
     }
 
     public Shape(String color, boolean filled){
@@ -36,5 +46,15 @@ public class Shape {
                 "Color='" + Color + '\'' +
                 ", filled=" + filled +
                 '}';
+    }
+    public void MoveRandom(){
+        Random random = new Random();
+        int x=1,y=1;
+        while(x>0){
+            x= random.nextInt(300);
+            y= random.nextInt(300);
+            setP(new Point(x,y));
+        }
+
     }
 }

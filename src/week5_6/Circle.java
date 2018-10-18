@@ -1,10 +1,22 @@
-package week4.task2;
+package week5_6;
+
+import java.util.Random;
+
 public class Circle extends Shape {
     private double radius;
     private final double pi = 3.14;
+    Point p;
+
+    public Point getP() {
+        return p;
+    }
+
+    public void setP(Point p) {
+        this.p = p;
+    }
 
     public Circle() {
-        this.radius=1.0;
+        p=new Point();
     }
 
     public Circle(double radius) {
@@ -37,5 +49,10 @@ public class Circle extends Shape {
                 "radius=" + radius +
                 ", pi=" + pi +
                 '}';
+    }
+
+    @Override
+    public void MoveRandom() {
+        super.MoveRandom();
     }
 }
