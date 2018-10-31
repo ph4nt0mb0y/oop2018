@@ -1,82 +1,70 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package week5_6;
 
 import java.util.Random;
 
-public class Rectangle extends Shape {
-    Point p1, p2;
-    private double width;
-    private double length;
-    public Rectangle() {
-        p1 = new Point();
-        p2 = new Point();
-    }
-    public Rectangle(double width,double length){
-        this.width = width;
-        this.length = length;
-    }
-    public Rectangle(double width,double length,String color, boolean filled){
-        super(color,filled);
-        this.width = width;
-        this.length = length;
+
+public class Rectangle extends Shape{
+    private Point leftAbove;
+    private Point rightUnder;
+   
+    public Rectangle(){
+        leftAbove = new Point();
+        rightUnder = new Point();
     }
 
-    public double getWidth() {
-        return width;
+    
+    public Point getLeftAbove() {
+        return leftAbove;
     }
 
-    public void setWidth(double size) {
-        this.width = width;
+    public void setLeftAbove(Point leftAbove) {
+        this.leftAbove = leftAbove;
     }
 
-    public double getLength() {
-        return length;
+    public Point getRightUnder() {
+        return rightUnder;
     }
 
-    public void setLength(double length) {
-        this.length = length;
+    public void setRightUnder(Point rightUnder) {
+        this.rightUnder = rightUnder;
     }
-    public double getArea(){
-        return width*length;
+  
+    
+    public int solvePetermeter(){
+        int a = leftAbove.getY()-rightUnder.getY();
+        int b= rightUnder.getX()-leftAbove.getX();
+        a=Math.abs(a);
+        b=Math.abs(b);
+        return 2*(a+b);
     }
-    public double getPerimeter(){
-        return (width+length)*2;
+    public void moveTo(Point leftAbove1, Point rightUnder1){
+        this.leftAbove.moveTo(leftAbove1.getX(),leftAbove1.getY());
+        this.rightUnder.moveTo(rightUnder.getX(), rightUnder.getY());
     }
-
-    @Override
-    public String toString() {
-        return "Rectangle{" +
-                "width=" + width +
-                ", length=" + length +
-                '}';
-    }
-
-    public Point getP1() {
-        return p1;
-    }
-
-    public void setP1(Point p1) {
-        this.p1 = p1;
-    }
-
-    public Point getP2() {
-        return p2;
-    }
-
-    public void setP2(Point p2) {
-        this.p2 = p2;
-    }
-
-    public void MoveRandom(){
-        Random random = new Random();
-        int x1=1,x2=1,y1=1,y2=1;
-        while(x1>0){
-            x1= random.nextInt(300);
-            x2= random.nextInt(300);
-            y1= random.nextInt(300);
-            y2= random.nextInt(300);
-            setP1(new Point(x1,y1));
-            setP2(new Point(x2,y2));
+    public void moveToRandom(){
+        leftAbove.moveToRandomm();
+        rightUnder.moveToRandomm();
+        if(leftAbove.getX()>rightUnder.getX()||leftAbove.getY()<rightUnder.getY()){
+            Point p = leftAbove;
+            leftAbove = rightUnder;
+            rightUnder = p;
+            
         }
-
+        
+    }
+    public int solveArea(){
+        int a = leftAbove.getY()-rightUnder.getY();
+        int b= rightUnder.getX()-leftAbove.getX();
+        a=Math.abs(a);
+        b=Math.abs(b);
+        return a*b;
+    }
+    public String toString(){
+        return "Rectangle";
     }
 }
