@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Exception {
+public class Task2 {
     private static String getString() {
         if(1==2) return "1=2!!";
         else return null;
@@ -61,8 +61,8 @@ public class Exception {
             System.out.println("Error");
             e.printStackTrace();
         }
-        Exception e = new Exception();
-        e.readfile();
+        Task2 t = new Task2();
+        t.readfile();
         Object obj = Test.getVal();
         System.out.println(String.valueOf(Test.getVal()));
     }
