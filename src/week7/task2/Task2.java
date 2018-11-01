@@ -61,8 +61,13 @@ public class Task2 {
             System.out.println("Error");
             e.printStackTrace();
         }
+<<<<<<< HEAD
+        Task2 e = new Task2();
+        e.readfile();
+=======
         Task2 t = new Task2();
         t.readfile();
+>>>>>>> a0248d747ff71b152d39241ca50105afc2b5daf3
         Object obj = Test.getVal();
         System.out.println(String.valueOf(Test.getVal()));
     }

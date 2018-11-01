@@ -10,3 +10,4 @@ public class Square extends Expression {
     @Override
     public int evaluate(){return expression.evaluate()*expression.evaluate();}
 }
+
