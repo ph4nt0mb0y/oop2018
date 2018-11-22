@@ -19,6 +19,31 @@ public class Task1 {
             String string = "";
             String s = scanner.nextLine();
             if(s.contains("static")){
+                string +=s;
+                while(scanner.hasNext()){
+                    String s0 = scanner.nextLine();
+                    if(!s.contains("static")){
+                        string +=s0;
+                    }
+                    else break;
+                }
+                list.add(string);
+            }
+        }
+        return list;
+    }
+    public static List<String> getAllFunctions1(File path){
+        List<String> list = new ArrayList<>();
+        Scanner scanner = null;
+        try {
+            scanner = new Scanner(path);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        while(scanner.hasNext()){
+            String string = "";
+            String s = scanner.nextLine();
+            if(s.contains("static")){
                     for (String w : s.split("\\s")) {
                         if (w.contains("(")||w.contains(",")||w.contains(")")) string +=w;
                     }
@@ -29,8 +54,9 @@ public class Task1 {
     }
     public static String findFunctionByName(String name){
         List<String> test = getAllFunctions(new File("C:\\Github\\oop2018-hw-1\\oop2018-hw\\oop2018\\src\\week9\\Utils.java"));
-        for(int i=0;i<test.size();i++){
-            if(test.get(i).equals(name)) return name;
+        List<String> test1 = getAllFunctions1(new File("C:\\Github\\oop2018-hw-1\\oop2018-hw\\oop2018\\src\\week9\\Utils.java"));
+        for(int i=0;i<test1.size();i++){
+            if(test1.get(i).equals(name)) return test.get(i);
         }
         return "Không tồn tại!!!!!";
     }
